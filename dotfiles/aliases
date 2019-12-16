@@ -13,7 +13,8 @@ alias k='kubectl'
 # Git aliases - based on http://www.catonmat.net/blog/git-aliases/
 alias g=git
 alias ga='git add'
-alias gl='git log'
+#alias gl='git log'
+alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 alias gll='git log --decorate --pretty=oneline --abbrev-commit'
 alias gla='git log --decorate --pretty=oneline --abbrev-commit --graph --all'
 alias gfu='git fetch upstream; git checkout -B master origin/master'
@@ -31,7 +32,6 @@ alias gra='git remote add'
 alias grr='git remote rm'
 alias gcl='git clone'
 alias gfom='git fetch origin; git checkout -B master origin/master'
-alias gfod='git fetch origin; git checkout -B develop origin/develop'
 alias gprbom='git pull --rebase origin master'
 alias grbom='git rebase origin/master'
 alias grbiom='git rebase -i origin/master'
@@ -44,7 +44,6 @@ alias lg1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold b
 alias lg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 alias o='open' # 'open' files from the commandline
-
 
 alias c='code .' # Open current directory in visual studio code
 alias ij='idea .' # open current directory in IntelliJ

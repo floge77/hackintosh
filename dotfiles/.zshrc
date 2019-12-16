@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
+  zsh-autosuggestions
   cp
   docker
   extract
@@ -19,13 +20,15 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.dotfiles/aliases ] && . $HOME/.dotfiles/aliases
 
+# kubernetes completion
+if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# Source zsh-autosuggestions installed via brew
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+
+
 # DEV stuff
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
-# Source zsh-autosuggestions installed via brew
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# kubernetes completion
-if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+LANG=en_US.utf8

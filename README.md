@@ -30,11 +30,3 @@
 2. Configure SSDT for CPU Power Management with [this guide](https://www.tonymacx86.com/threads/quick-guide-to-generate-a-ssdt-for-cpu-power-management.177456/).
 3. Configure dsdt with [this guide]() 
 4. Configure messages with [this guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/)
-
-## Tools for manual installation
-
-- https://iterm2.com/downloads.html
-- https://www.mozilla.org/en-US/firefox/mac/
-- https://docs.docker.com/docker-for-mac/install/
-- https://www.jetbrains.com/idea/download/#section=mac
-- https://signal.org/download/
