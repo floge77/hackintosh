@@ -31,7 +31,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # dotfiles for zsh
 cp -f dotfiles/.zshrc $HOME/.zshrc
 mkdir -p $HOME/.dotfiles
-cp dotiles/* $HOME/.dotfiles/
+cp dotiles/aliases dotfiles/powerlevel $HOME/.dotfiles/
 
 ### osx configs
 chflags nohidden ~/Library #Show Library

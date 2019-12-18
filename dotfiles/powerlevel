@@ -26,4 +26,4 @@ POWERLEVEL9K_BATTERY_LOW_COLOR='red'
 POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
 
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
