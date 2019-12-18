@@ -6,11 +6,16 @@ brew tap caskroom/versions
 brew doctor
 
 ### Tools and Software
-brew install golang pyhton3 pyenv pip3 hub ffmpeg lame \
-            maven nmap openssl pass pinentry pinentry-mac \
-            tree vim wget youtube-dl fzf tmux thefuck caffeine \
-            firefox postman signal alfred mtr htop
-brew cask install java8 slack docker visual-studio-code iterm2
+
+## Dev Tools
+brew install golang pyhton3 pyenv pip3 hub ffmpeg lame maven nmap openssl \
+            tree vim wget fzf tmux thefuck postman  mtr htop
+
+## Tools
+brew install pass pinentry pinentry-mac firefox signal alfred caffeine youtube-dl Itsycal
+
+## Programms
+brew cask install java8 slack docker visual-studio-code iterm2 mas itsycal vlc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 ### Terminal
@@ -38,3 +43,9 @@ chflags nohidden ~/Library #Show Library
 defaults write com.apple.finder AppleShowAllFiles YES #Show Hidden Files
 defaults write com.apple.finder ShowPathbar -bool true #Show Path Bar
 defaults write com.apple.finder ShowStatusBar -bool true #Show status Bar
+
+### mas installs
+# Log into Appstore before
+mas signin
+# Amphetamine, Automute, BetterSnapTool, Outbank
+mas install 937984704 1118136179 417375580 1094255754

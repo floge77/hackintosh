@@ -13,10 +13,8 @@ alias k='kubectl'
 # Git aliases - based on http://www.catonmat.net/blog/git-aliases/
 alias g=git
 alias ga='git add'
-#alias gl='git log'
 alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
-alias gll='git log --decorate --pretty=oneline --abbrev-commit'
-alias gla='git log --decorate --pretty=oneline --abbrev-commit --graph --all'
+alias glg='git log --decorate --pretty=oneline --abbrev-commit'
 alias gfu='git fetch upstream; git checkout -B master origin/master'
 alias gs='git status'
 alias gd='git diff'
@@ -35,13 +33,11 @@ alias gfom='git fetch origin; git checkout -B master origin/master'
 alias gprbom='git pull --rebase origin master'
 alias grbom='git rebase origin/master'
 alias grbiom='git rebase -i origin/master'
+
 alias gftest='gau; gca --no-edit; gp -f; echo""; echo -e "\e[31mStatus after git push -f:\e[0m";echo"" ; gst'
 
 alias gcms="git commit -m"
 alias gp="git push"
-
-alias lg1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-alias lg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 alias o='open' # 'open' files from the commandline
 
