@@ -26,7 +26,6 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
-brew install zsh
 sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -37,6 +36,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 cp -f dotfiles/.zshrc $HOME/.zshrc
 mkdir -p $HOME/.dotfiles
 cp dotiles/aliases dotfiles/powerlevel $HOME/.dotfiles/
+
+# iTerm config
+cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
 ### osx configs
 chflags nohidden ~/Library #Show Library
