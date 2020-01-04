@@ -7,15 +7,13 @@ brew doctor
 
 ### Tools and Software
 
-## Dev Tools
-brew install golang pyhton3 pyenv pip3 hub ffmpeg lame maven nmap openssl \
-            tree vim wget fzf tmux thefuck postman  mtr htop
-
-## Tools
-brew install pass pinentry pinentry-mac firefox signal alfred caffeine youtube-dl Itsycal
+## CLI Tools
+brew install golang python pyenv hub ffmpeg lame maven nmap openssl \
+            tree vim wget fzf tmux thefuck mtr htop pass pinentry \
+            pinentry-mac youtube-dl mas
 
 ## Programms
-brew cask install java8 slack docker visual-studio-code iterm2 mas itsycal vlc
+brew cask install java slack docker visual-studio-code iterm2 itsycal vlc postman firefox signal alfred caffeine
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 ### Terminal
@@ -48,6 +46,5 @@ defaults write com.apple.finder ShowStatusBar -bool true #Show status Bar
 
 ### mas installs
 # Log into Appstore before
-mas signin
 # Amphetamine, Automute, BetterSnapTool, Outbank
-mas install 937984704 1118136179 417375580 1094255754
+mas install 937984704 1118136179 417375580 1094255754 
