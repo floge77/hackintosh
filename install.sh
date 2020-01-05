@@ -33,9 +33,18 @@ mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
 ## CLI Tools
+brew tap amar1729/formulae
 brew install golang python pyenv hub ffmpeg lame nmap openssl \
-            tree vim wget fzf tmux thefuck mtr htop pass pinentry \
-            pinentry-mac youtube-dl mas kubernetes-cli gnupg
+            tree vim wget fzf tmux thefuck mtr htop \
+            pinentry-mac youtube-dl mas kubernetes-cli
+
+## Paswordmanager
+brew install coreutils gnu-sed gnupg browserpass pass pinentry
+PREFIX='/usr/local/opt/browserpass' make hosts-chrome-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
+PREFIX='/usr/local/opt/browserpass' make hosts-firefox-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
+sudo echo "pinentry-program $(echo $(which pinentry-mac))" > ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
+
 
 ## Dev tools
 brew cask install java docker visual-studio-code postman
