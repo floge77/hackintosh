@@ -48,6 +48,7 @@ gpgconf --kill gpg-agent
 
 ## Dev tools
 brew cask install java docker visual-studio-code postman
+cp -f vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 brew install maven
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
