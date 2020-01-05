@@ -33,12 +33,12 @@ mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
 ## CLI Tools
-brew tap amar1729/formulae
 brew install golang python pyenv hub ffmpeg lame nmap openssl \
             tree vim wget fzf tmux thefuck mtr htop \
             pinentry-mac youtube-dl mas kubernetes-cli
 
 ## Paswordmanager
+brew tap amar1729/formulae
 brew install coreutils gnu-sed gnupg browserpass pass pinentry
 PREFIX='/usr/local/opt/browserpass' make hosts-chrome-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
 PREFIX='/usr/local/opt/browserpass' make hosts-firefox-user -f /usr/local/opt/browserpass/lib/browserpass/Makefile
@@ -54,7 +54,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
 
 ## Other tools
-brew cask install slack discord itsycal vlc firefox google-chrome signal alfred little-snitch
+brew cask install slack discord itsycal vlc firefox google-chrome signal alfred little-snitch homebrew/cask-drivers/steelseries-engine homebrew/cask-drivers/steelseries-exactmouse-tool
+
 # mount little-snitch * is for any version
 hdiutil attach /usr/local/Caskroom/little-snitch/*/*.dmg
 
