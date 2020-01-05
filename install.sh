@@ -1,50 +1,66 @@
-xcode-select --install
+#!/bin/bash
+
+## Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
-brew tap caskroom/cask
-brew tap caskroom/versions
 brew doctor
 
-### Tools and Software
+## Terminal
+brew cask install iterm2
 
-## CLI Tools
-brew install golang python pyenv hub ffmpeg lame maven nmap openssl \
-            tree vim wget fzf tmux thefuck mtr htop pass pinentry \
-            pinentry-mac youtube-dl mas
-
-## Programms
-brew cask install java slack docker visual-studio-code iterm2 itsycal vlc postman firefox signal alfred caffeine
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-
-### Terminal
-
-#powerlevel fonts and nerd fonts
-# do not forget: iTerm → Preferences → Profiles → Text → Change Font
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
-
-sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# oh-my-zsh (RUNZSH=no supresses shell switch)
+sh -c "RUNZSH=no; $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # auto suggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+# syntax highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+
+# powerlevel fonts and nerd fonts
+# do not forget: iTerm → Preferences → Profiles → Text → Change Font
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
 
 # dotfiles for zsh
 cp -f dotfiles/.zshrc $HOME/.zshrc
 mkdir -p $HOME/.dotfiles
-cp dotiles/aliases dotfiles/powerlevel $HOME/.dotfiles/
+cp -f dotfiles/aliases dotfiles/powerlevel $HOME/.dotfiles/
 
-# iTerm config
+# iTerm config has to be imported manually again :/ need fix!
+mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
+## CLI Tools
+brew install golang python pyenv hub ffmpeg lame nmap openssl \
+            tree vim wget fzf tmux thefuck mtr htop pass pinentry \
+            pinentry-mac youtube-dl mas kubernetes-cli gnupg
+
+## Dev tools
+brew cask install java docker visual-studio-code postman
+brew install maven
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
+
+## Other tools
+brew cask install slack discord itsycal vlc firefox google-chrome signal alfred little-snitch
+# mount little-snitch * is for any version
+hdiutil attach /usr/local/Caskroom/little-snitch/*/*.dmg
+
 ### osx configs
-chflags nohidden ~/Library #Show Library
-defaults write com.apple.finder AppleShowAllFiles YES #Show Hidden Files
-defaults write com.apple.finder ShowPathbar -bool true #Show Path Bar
-defaults write com.apple.finder ShowStatusBar -bool true #Show status Bar
+# Show Library
+chflags nohidden ~/Library
+# Show Hidden Files
+defaults write com.apple.finder AppleShowAllFiles YES
+# Show Path Bar
+defaults write com.apple.finder ShowPathbar -bool true
+# Show status Bar
+defaults write com.apple.finder ShowStatusBar -bool true
 
 ### mas installs
 # Log into Appstore before
-# Amphetamine, Automute, BetterSnapTool, Outbank
-mas install 937984704 1118136179 417375580 1094255754 
+# Amphetamine, BetterSnapTool, Outbank
+mas install 937984704 417375580 1094255754 
+
+echo "Execute now the little-snitch installer which is mounted!"
