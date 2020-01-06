@@ -25,3 +25,9 @@ Follow [this guide](https://www.tonymacx86.com/threads/how-to-create-a-macos-cat
 The install.sh installs many development tools as well as a pre configured iterm2 terminal.
 After installation your terminal will look like this:
 ![](iterm2.png)
+
+## Vs-Code
+
+install.sh also installs vs-code. The vs-code-settings.json will be copied to the vs-code user settings (~/Library/Application\ Support/Code/User/).
+Those settings will let your vs-code installation look like this:
+![](vs-code.png)
