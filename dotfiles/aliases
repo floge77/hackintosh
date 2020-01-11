@@ -38,6 +38,7 @@ alias gftest='gau; gca --no-edit; gp -f; echo""; echo -e "\e[31mStatus after git
 
 alias gcms="git commit -m"
 alias gp="git push"
+alias gpl="git pull"
 
 alias o='open' # 'open' files from the commandline
 

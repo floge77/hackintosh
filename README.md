@@ -19,10 +19,11 @@ Follow [this guide](https://www.tonymacx86.com/threads/how-to-create-a-macos-cat
 
 1. Configure SMBIOS with [this guide](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/). Use a mac which cpu matches best your installed cpu.
 2. Configure messages with [this guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/)
+3. Configure USB using [this guide](https://github.com/corpnewt/USBMap/)
 
 ## Terminal
 
-The install.sh installs many development tools as well as a pre configured iterm2 terminal.
+The install.sh installs many development tools as well as a pre configured iterm2 terminal (sadly the profile has to be manually imported thus it is in the correct directory).
 After installation your terminal will look like this:
 ![](iterm2.png)
 
