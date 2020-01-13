@@ -49,6 +49,44 @@ gpgconf --kill gpg-agent
 ## Dev tools
 brew cask install java docker visual-studio-code postman
 cp -f vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
+code --install-extension aaron-bond.better-comments
+code --install-extension abusaidm.html-snippets
+code --install-extension akamud.vscode-theme-onedark
+code --install-extension ban.spellright
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension christian-kohler.path-intellisense
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension donjayamanne.githistory
+code --install-extension EditorConfig.EditorConfig
+code --install-extension Equinusocio.vsc-community-material-theme
+code --install-extension Equinusocio.vsc-material-theme
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.code-runner
+code --install-extension formulahendry.github-actions
+code --install-extension gardener.vscode-gardener-tools
+code --install-extension jenkinsxio.vscode-jx-tools
+code --install-extension joaompinto.asciidoctor-vscode
+code --install-extension marlon407.code-groovy
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension ms-python.python
+code --install-extension ms-vscode.Go
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code --install-extension naco-siren.gradle-language
+code --install-extension PKief.material-icon-theme
+code --install-extension redhat.java
+code --install-extension redhat.vscode-yaml
+code --install-extension techer.open-in-browser
+code --install-extension VisualStudioExptTeam.vscodeintellicode
+code --install-extension vscjava.vscode-java-debug
+code --install-extension vscjava.vscode-java-dependency
+code --install-extension vscjava.vscode-java-pack
+code --install-extension vscjava.vscode-java-test
+code --install-extension vscjava.vscode-maven
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension ziyasal.vscode-open-in-github
+
 brew install maven
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
