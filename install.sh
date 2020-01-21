@@ -48,6 +48,10 @@ gpgconf --kill gpg-agent
 
 ## Dev tools
 brew cask install java docker visual-studio-code postman
+# maven has to be installed after java
+brew install maven
+
+# configure vs code
 cp -f vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 code --install-extension aaron-bond.better-comments
 code --install-extension abusaidm.html-snippets
@@ -64,10 +68,7 @@ code --install-extension Equinusocio.vsc-material-theme
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.code-runner
 code --install-extension formulahendry.github-actions
-code --install-extension gardener.vscode-gardener-tools
-code --install-extension jenkinsxio.vscode-jx-tools
 code --install-extension joaompinto.asciidoctor-vscode
-code --install-extension marlon407.code-groovy
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension ms-python.python
@@ -84,10 +85,9 @@ code --install-extension vscjava.vscode-java-dependency
 code --install-extension vscjava.vscode-java-pack
 code --install-extension vscjava.vscode-java-test
 code --install-extension vscjava.vscode-maven
-code --install-extension vscode-icons-team.vscode-icons
 code --install-extension ziyasal.vscode-open-in-github
 
-brew install maven
+# install node version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
 
