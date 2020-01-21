@@ -34,7 +34,7 @@ cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
 ## CLI Tools
 brew install golang python pyenv hub ffmpeg lame nmap openssl \
-            tree vim wget fzf tmux thefuck ranger mtr htop \
+            tree vim wget jq fzf tmux thefuck ranger mtr htop \
             pinentry-mac youtube-dl mas kubernetes-cli
 
 ## Paswordmanager
