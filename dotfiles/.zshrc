@@ -30,6 +30,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 # DEV stuff
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/"
+PATH="$JAVA_HOME:$PATH"
 
 # node version manager
 export NVM_DIR="$HOME/.nvm"
