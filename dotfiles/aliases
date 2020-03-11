@@ -34,11 +34,26 @@ alias gprbom='git pull --rebase origin master'
 alias grbom='git rebase origin/master'
 alias grbiom='git rebase -i origin/master'
 
-alias gftest='gau; gca --no-edit; gp -f; echo""; echo -e "\e[31mStatus after git push -f:\e[0m";echo"" ; gst'
+alias forcepush='gau; gca --no-edit; gp -f; echo""; echo -e "\e[31mStatus after git push -f:\e[0m";echo"" ; gst'
 
 alias gcms="git commit -m"
 alias gp="git push"
 alias gpl="git pull"
+
+# DockerEXecute - get a shell in the given container
+dex() {
+    docker exec -it $1 bash -il
+}
+
+pushit() {
+	gau
+	gcms $1
+	gp
+	echo ""
+	echo -e "\e[31mStatus after git push: \e[0m"
+	echo ""
+	gst
+}
 
 alias o='open' # 'open' files from the commandline
 
