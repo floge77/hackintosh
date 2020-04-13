@@ -52,7 +52,6 @@ brew cask install java docker visual-studio-code postman
 brew install maven
 
 # configure vs code
-cp -f vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 code --install-extension aaron-bond.better-comments
 code --install-extension abusaidm.html-snippets
 code --install-extension akamud.vscode-theme-onedark
@@ -100,6 +99,8 @@ hdiutil attach /usr/local/Caskroom/little-snitch/*/*.dmg
 ### osx configs
 # Show Library
 chflags nohidden ~/Library
+# now we can copy vs code settings
+cp -f vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 # Show Hidden Files
 defaults write com.apple.finder AppleShowAllFiles YES
 # Show Path Bar
