@@ -6,7 +6,7 @@ brew update
 brew doctor
 
 ## Terminal
-brew cask install iterm2
+brew install --cask iterm2
 
 # oh-my-zsh (RUNZSH=no supresses shell switch)
 sh -c "RUNZSH=no; $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -21,7 +21,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 # do not forget: iTerm → Preferences → Profiles → Text → Change Font
 git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+brew install --cask font-hack-nerd-font
 
 # dotfiles for zsh
 cp -f dotfiles/.zshrc $HOME/.zshrc
@@ -32,7 +32,7 @@ cp -f dotfiles/aliases dotfiles/powerlevel $HOME/.dotfiles/
 mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
-## CLI Tools
+## CLI Tools, languages...
 brew install golang python pyenv hub ffmpeg lame nmap openssl \
             tree vim wget jq fzf tldr tmux thefuck ranger mtr htop \
             pinentry-mac youtube-dl mas kubernetes-cli
@@ -66,14 +66,10 @@ code --install-extension Equinusocio.vsc-community-material-theme
 code --install-extension Equinusocio.vsc-material-theme
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.code-runner
-code --install-extension formulahendry.github-actions
-code --install-extension joaompinto.asciidoctor-vscode
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension ms-python.python
 code --install-extension ms-vscode.Go
-code --install-extension ms-vscode.vscode-typescript-tslint-plugin
-code --install-extension naco-siren.gradle-language
 code --install-extension PKief.material-icon-theme
 code --install-extension redhat.java
 code --install-extension redhat.vscode-yaml
@@ -91,10 +87,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
 
 ## Other tools
-brew cask install slack discord itsycal vlc firefox google-chrome signal alfred little-snitch homebrew/cask-drivers/steelseries-engine homebrew/cask-drivers/steelseries-exactmouse-tool
-
-# mount little-snitch * is for any version
-hdiutil attach /usr/local/Caskroom/little-snitch/*/*.dmg
+brew install --cask alt-tab slack discord itsycal vlc firefox google-chrome signal alfred
 
 ### osx configs
 # Show Library
@@ -113,4 +106,4 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Amphetamine, BetterSnapTool, Outbank
 mas install 937984704 417375580 1094255754 
 
-echo "Execute now the little-snitch installer which is mounted!"
+echo "installation done!"
