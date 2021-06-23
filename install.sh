@@ -25,6 +25,7 @@ brew install --cask font-hack-nerd-font
 
 # dotfiles for zsh
 cp -f dotfiles/.zshrc $HOME/.zshrc
+cp -f dotfiles/.p10k.zsh $HOME/.p10kzsh
 mkdir -p $HOME/.dotfiles
 cp -f dotfiles/aliases dotfiles/powerlevel $HOME/.dotfiles/
 
@@ -35,7 +36,11 @@ cp iterm.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 ## CLI Tools, languages...
 brew install golang python pyenv hub ffmpeg lame nmap openssl \
             tree vim wget jq fzf tldr tmux thefuck ranger mtr htop \
-            pinentry-mac youtube-dl mas kubernetes-cli
+            pinentry-mac youtube-dl mas kubernetes-cli openjdk maven
+
+## Dev tools
+brew install --cask docker visual-studio-code postman hiddenbar stats rectangle \
+    alt-tab slack discord itsycal vlc signal telegram alfred firefox google-chrome
 
 ## Paswordmanager
 brew tap amar1729/formulae
@@ -46,48 +51,28 @@ sudo echo "pinentry-program $(echo $(which pinentry-mac))" > ~/.gnupg/gpg-agent.
 gpgconf --kill gpg-agent
 
 
-## Dev tools
-brew cask install java docker visual-studio-code postman
-# maven has to be installed after java
-brew install maven
-
 # configure vs code
-code --install-extension aaron-bond.better-comments
-code --install-extension abusaidm.html-snippets
 code --install-extension akamud.vscode-theme-onedark
 code --install-extension ban.spellright
-code --install-extension christian-kohler.npm-intellisense
 code --install-extension christian-kohler.path-intellisense
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension donjayamanne.githistory
 code --install-extension EditorConfig.EditorConfig
-code --install-extension Equinusocio.vsc-community-material-theme
-code --install-extension Equinusocio.vsc-material-theme
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.code-runner
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension ms-python.python
 code --install-extension ms-vscode.Go
-code --install-extension PKief.material-icon-theme
 code --install-extension redhat.java
 code --install-extension redhat.vscode-yaml
 code --install-extension techer.open-in-browser
-code --install-extension VisualStudioExptTeam.vscodeintellicode
-code --install-extension vscjava.vscode-java-debug
-code --install-extension vscjava.vscode-java-dependency
-code --install-extension vscjava.vscode-java-pack
-code --install-extension vscjava.vscode-java-test
-code --install-extension vscjava.vscode-maven
 code --install-extension ziyasal.vscode-open-in-github
 
 # install node version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
-
-## Other tools
-brew install --cask alt-tab slack discord itsycal vlc firefox google-chrome signal alfred
 
 ### osx configs
 # Show Library
@@ -100,10 +85,5 @@ defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder ShowPathbar -bool true
 # Show status Bar
 defaults write com.apple.finder ShowStatusBar -bool true
-
-### mas installs
-# Log into Appstore before
-# Amphetamine, BetterSnapTool, Outbank
-mas install 937984704 417375580 1094255754 
 
 echo "installation done!"
